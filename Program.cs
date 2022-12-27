@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using FuzzySharpTest;
 
 namespace FuzzySharpTest
 {
@@ -61,16 +64,18 @@ namespace FuzzySharpTest
                 { "Mechanical Room",  backOfHouseSpaces}
             };
 
-            List<string> possibleTypes = new List<string>();
+           HashSet<string> possibleTypes = new HashSet<string>();
 
 
             string input = Console.ReadLine();
 
             List<string> inputs = input.Split(' ').ToList();
 
-            inputs = inputs.Where(x => x.ToLower() != "room" || x.ToLower() != "space").ToList();
+            //inputs = inputs.Where(x => x.ToLower() != "room" || x.ToLower() != "space").ToList();
 
-            foreach(var thing in inputs)
+            inputs = inputs.RemoveSpecialWords(new string[2] { "room", "space" });
+
+            foreach (var thing in inputs)
             {
                 foreach (var spaceType in spaceTypes)
                 {
@@ -94,7 +99,7 @@ namespace FuzzySharpTest
             
             Console.WriteLine("---------------------------");
             Console.WriteLine("Possible choices are:");
-            foreach (var item in new HashSet<string>(possibleTypes))
+            foreach (var item in possibleTypes)
             {
                 Console.WriteLine(item);
             }
@@ -105,5 +110,31 @@ namespace FuzzySharpTest
 
 
         }
+                
+    }
+
+    static class Compute
+    {
+        public static List<string> RemoveSpecialWords(this List<string> words, string[] wordsToRemove)
+        {
+            List<string> result = new List<string>();
+            result = words.Where(x => wordsToRemove.Contains(x.ToLower()) == false).ToList();
+
+            return result;
+        }
+
+        public static string RemoveSpecialCharacters(this string word, char[] charsToRemove)
+        {
+            
+            string result = "";
+
+            foreach (var ch in charsToRemove)
+            {
+                result = word.Replace(ch.ToString(), string.Empty);
+            }
+
+            return result;
+        }
+
     }
 }
