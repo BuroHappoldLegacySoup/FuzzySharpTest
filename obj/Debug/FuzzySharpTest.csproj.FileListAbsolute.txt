@@ -1,0 +1,11 @@
+C:\Users\tpotter\source\repos\FuzzySharpTest\bin\Debug\FuzzySharpTest.exe.config
+C:\Users\tpotter\source\repos\FuzzySharpTest\bin\Debug\FuzzySharpTest.exe
+C:\Users\tpotter\source\repos\FuzzySharpTest\bin\Debug\FuzzySharpTest.pdb
+C:\Users\tpotter\source\repos\FuzzySharpTest\bin\Debug\FuzzySharp.dll
+C:\Users\tpotter\source\repos\FuzzySharpTest\bin\Debug\FuzzySharp.pdb
+C:\Users\tpotter\source\repos\FuzzySharpTest\obj\Debug\FuzzySharpTest.csproj.AssemblyReference.cache
+C:\Users\tpotter\source\repos\FuzzySharpTest\obj\Debug\FuzzySharpTest.csproj.SuggestedBindingRedirects.cache
+C:\Users\tpotter\source\repos\FuzzySharpTest\obj\Debug\FuzzySharpTest.csproj.CoreCompileInputs.cache
+C:\Users\tpotter\source\repos\FuzzySharpTest\obj\Debug\FuzzySharpTest.csproj.CopyComplete
+C:\Users\tpotter\source\repos\FuzzySharpTest\obj\Debug\FuzzySharpTest.exe
+C:\Users\tpotter\source\repos\FuzzySharpTest\obj\Debug\FuzzySharpTest.pdb
